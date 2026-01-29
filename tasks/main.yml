@@ -18,6 +18,11 @@
   tags: always
   run_once: true
 
+- name: debug ansible_local.opnsense
+  ansible.builtin.debug:
+    var: ansible_local.opnsense
+    verbosity: 2
+
 - name: check facts ... real facts and not alternative one!
   ansible.builtin.assert:
     msg: "role requires current ansible-opnsense-facts"
@@ -26,6 +31,11 @@
       - ansible_local.opnsense.ansible_opnsense_facts_version is defined
       - ansible_local.opnsense.ansible_opnsense_facts_version is version_compare('0.3', '>=')
   tags: always
+
+- name: debug ansible_local.opnsense.pkg_upgrade
+  ansible.builtin.debug:
+    var: ansible_local.opnsense.pkg_upgrade
+    verbosity: 1
 
 # get informations for major upgrades from pkg_upgrade fact
 - name: get next available upgrade_major_version
