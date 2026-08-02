@@ -1,0 +1,19 @@
+---
+dependencies:
+  - role: ansible-opnsense-facts
+
+galaxy_info:
+  author: zerwes, crpb
+  description: Ansible Role to Perform a firmware update for opnsense
+  namespace: rls
+  company: Rosa-Luxemburg-Stiftung Gesellschaftsanalyse und politische Bildung e. V.
+  license: GPL 3.0
+  min_ansible_version: 2.11.0
+  platforms:
+    - name: FreeBSD
+      versions:
+        - all
+  galaxy_tags:
+    - opnsense
+    - firewall
+    - freebsd
